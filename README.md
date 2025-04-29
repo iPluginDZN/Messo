@@ -1,4 +1,4 @@
-Messo - Ứng dụng nhắn tin P2P
+# Messo - Ứng dụng nhắn tin P2P
 
 ## Tính năng chính
 
