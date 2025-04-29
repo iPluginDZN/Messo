@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Messo-SE</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_message">Messages</string>
+    <string name="title_contacts">Contacts</string>
+    <string name="title_profile">Profile</string>
+</resources>
