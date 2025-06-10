@@ -12,6 +12,11 @@
         android:title="@string/title_contacts" />
 
     <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/search_icon"
+        android:title="@string/title_search" />
+
+    <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/profile_icon"
         android:title="@string/title_profile" />

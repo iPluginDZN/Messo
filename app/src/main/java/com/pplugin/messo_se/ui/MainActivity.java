@@ -62,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                         break;
                     case 2:
+                        navView.getMenu().findItem(R.id.navigation_search).setChecked(true);
+                        if (getSupportActionBar() != null) {
+                            getSupportActionBar().setTitle("Search");
+                        }
+                        break;
+                    case 3:
                         navView.getMenu().findItem(R.id.navigation_profile).setChecked(true);
                         if (getSupportActionBar() != null) {
                             getSupportActionBar().setTitle("Profile");
@@ -91,8 +97,14 @@ public class MainActivity extends AppCompatActivity {
                             getSupportActionBar().setTitle("Contacts");
                         }
                         break;
-                    case R.id.navigation_profile:
+                    case R.id.navigation_search:
                         viewPager.setCurrentItem(2);
+                        if (getSupportActionBar() != null) {
+                            getSupportActionBar().setTitle("Search");
+                        }
+                        break;
+                    case R.id.navigation_profile:
+                        viewPager.setCurrentItem(3);
                         if (getSupportActionBar() != null) {
                             getSupportActionBar().setTitle("Profile");
                         }

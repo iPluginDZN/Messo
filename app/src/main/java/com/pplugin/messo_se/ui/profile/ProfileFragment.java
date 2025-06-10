@@ -241,11 +241,21 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 try {
                     JSONObject editObj = new JSONObject();
-                    editObj.put("email", emailEditText.getText().toString());
-                    editObj.put("phone", phoneEditText.getText().toString());
-                    editObj.put("full_name", fullNameEditText.getText().toString());
-                    editObj.put("bio", bioEditText.getText().toString());
-                    editObj.put("date_of_birth", dateOfBirthEditText.getText().toString());
+                    if (emailEditText.getText() != null && !emailEditText.getText().toString().isEmpty()) {
+                        editObj.put("email", emailEditText.getText().toString());
+                    }
+                    if (phoneEditText.getText() != null && !phoneEditText.getText().toString().isEmpty()) {
+                        editObj.put("phone", phoneEditText.getText().toString());
+                    }
+                    if (fullNameEditText.getText() != null && !fullNameEditText.getText().toString().isEmpty()) {
+                        editObj.put("full_name", fullNameEditText.getText().toString());
+                    }
+                    if (bioEditText.getText() != null && !bioEditText.getText().toString().isEmpty()) {
+                        editObj.put("bio", bioEditText.getText().toString());
+                    }
+                    if (dateOfBirthEditText.getText() != null && !dateOfBirthEditText.getText().toString().isEmpty()) {
+                        editObj.put("date_of_birth", dateOfBirthEditText.getText().toString());
+                    }
                     Log.d("EditObj", editObj.toString());
 
                     String profileUrl = "http://10.0.2.2:3000/identity/edit-profile";

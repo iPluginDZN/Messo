@@ -10,6 +10,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.pplugin.messo_se.ui.messages.MessagesFragment;
 import com.pplugin.messo_se.ui.contacts.ContactsFragment;
 import com.pplugin.messo_se.ui.profile.ProfileFragment;
+import com.pplugin.messo_se.ui.search.SearchFragment;
 
 public class ViewpagerAdapter extends FragmentStatePagerAdapter {
     public ViewpagerAdapter(@NonNull FragmentManager fm, int behavior) {
@@ -25,12 +26,14 @@ public class ViewpagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new ContactsFragment();
             case 2:
+                return new SearchFragment();
+            case 3:
                 return new ProfileFragment();
         }
         return null;
     }
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 }
