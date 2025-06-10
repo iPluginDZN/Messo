@@ -1,5 +1,6 @@
 package com.pplugin.messo_se.ui;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -105,5 +106,20 @@ public class MainActivity extends AppCompatActivity {
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 //            return insets;
 //        });
+
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        try {
+            SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            if (!sharedPreferences.getBoolean("loggedIn", false)) {
+                editor.clear(); // Clear the shared preferences if needed
+                editor.apply(); // Apply changes
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

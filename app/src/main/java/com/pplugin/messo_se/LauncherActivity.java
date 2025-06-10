@@ -31,4 +31,5 @@ public class LauncherActivity extends AppCompatActivity {
         // Finish the launcher activity to prevent going back to it
         finish();
     }
+
 }

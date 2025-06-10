@@ -12,7 +12,7 @@
         android:id="@+id/nav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#393939"
+        android:background="#F2F2F2"
         app:itemIconSize="30dp"
         app:itemIconTint="@color/color_nav"
         app:itemTextColor="@color/color_nav"
