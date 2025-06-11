@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_see_profile"
+        android:title="See profile" />
+    <item
+        android:id="@+id/action_message"
+        android:title="Message" />
+    <item
+        android:id="@+id/action_call"
+        android:title="Call" />
+    <item
+        android:id="@+id/action_delete_contact"
+        android:title="Delete Contact" />
+    <item
+        android:id="@+id/action_block_contact"
+        android:title="Block Contact" />
+</menu>

@@ -24,6 +24,9 @@
             android:name=".ui.RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.contacts.PendingActivity"
+            android:exported="false" />
+        <activity
             android:name=".LauncherActivity"
             android:exported="true">
             <intent-filter>

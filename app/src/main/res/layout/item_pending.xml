@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="72dp"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:padding="12dp"
@@ -38,15 +38,6 @@
             android:ellipsize="end" />
 
         <TextView
-            android:id="@+id/tv_fullname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Full Name"
-            android:textSize="14sp"
-            android:textColor="#888888"
-            android:maxLines="1"
-            android:ellipsize="end" />
-        <TextView
             android:id="@+id/tv_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,17 +46,14 @@
             android:textColor="#888888"
             android:maxLines="1"
             android:ellipsize="end" />
-
     </LinearLayout>
 
-
     <TextView
-        android:id="@+id/tv_online_status"
+        android:id="@+id/tv_pending"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Online"
-        android:textColor="#00FF0D"
+        android:text="Pending"
+        android:textColor="@color/gray"
         android:layout_marginStart="12dp"
         android:textStyle="bold"/>
-
 </LinearLayout>
