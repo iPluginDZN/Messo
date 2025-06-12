@@ -27,6 +27,7 @@ import com.pplugin.messo_se.R;
 import com.pplugin.messo_se.adapter.ContactListAdapter;
 import com.pplugin.messo_se.model.ContactModel;
 import com.pplugin.messo_se.model.UserSearchModel;
+import com.pplugin.messo_se.ui.messages.MessageActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -92,7 +93,7 @@ public class ContactsFragment extends Fragment {
         if (context == null) return;
         SharedPreferences sharedPreferences = context.getSharedPreferences("login", Context.MODE_PRIVATE);
         String jwt = sharedPreferences.getString("token", null);
-        String url = "http://10.0.2.2:3000/connections/get-contacts";
+        String url = "https://pplugin.works/connections/get-contacts";
         RequestQueue queue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
             response -> {
@@ -125,6 +126,13 @@ public class ContactsFragment extends Fragment {
                         // TODO: Handle menu item clicks for selectedContact
                         // Example:
                         // if (item.getItemId() == R.id.action_see_profile) { ... }
+                        if (item.getItemId() == R.id.action_message) {
+                            Intent intent = new Intent(context, MessageActivity.class);
+                            intent.putExtra("userId", selectedContact.getUserId());
+                            intent.putExtra("userName", selectedContact.getUserName());
+                            intent.putExtra("avatarUrl", selectedContact.getAvatarUrl());
+                            context.startActivity(intent);
+                        }
                         return true;
                     });
                     popup.setOnDismissListener(dialog -> {
@@ -153,7 +161,7 @@ public class ContactsFragment extends Fragment {
         if (context == null) return;
         SharedPreferences sharedPreferences = context.getSharedPreferences("login", Context.MODE_PRIVATE);
         String jwt = sharedPreferences.getString("token", null);
-        String url = "http://10.0.2.2:3000/connections/get-pending-contacts";
+        String url = "https://pplugin.works/connections/get-pending-contacts";
         RequestQueue queue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
             response -> {

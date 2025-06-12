@@ -45,6 +45,8 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation("org.java-websocket:Java-WebSocket:1.5.4")
+    implementation("io.socket:socket.io-client:2.1.0") // Socket.IO client for Android
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

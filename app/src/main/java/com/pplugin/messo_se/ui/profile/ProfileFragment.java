@@ -152,7 +152,7 @@ public class ProfileFragment extends Fragment {
         }
 
         if (id != -1 && jwt != null) {
-            String url = "http://10.0.2.2:3000/identity/get-profile?id=" + id;
+            String url = "https://pplugin.works/identity/get-profile?id=" + id;
             RequestQueue queue = Volley.newRequestQueue(getContext());
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
@@ -258,8 +258,8 @@ public class ProfileFragment extends Fragment {
                     }
                     Log.d("EditObj", editObj.toString());
 
-                    String profileUrl = "http://10.0.2.2:3000/identity/edit-profile";
-                    String avatarUrl = "http://10.0.2.2:3000/identity/update-avatar";
+                    String profileUrl = "https://pplugin.works/identity/edit-profile";
+                    String avatarUrl = "https://pplugin.works/identity/update-avatar";
                     RequestQueue queue = Volley.newRequestQueue(getContext());
 
                     // 1. Save profile info

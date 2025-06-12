@@ -62,7 +62,7 @@ public class SearchFragment extends Fragment {
                     Toast.makeText(context, "Not logged in", Toast.LENGTH_SHORT).show();
                     return true;
                 }
-                String url = "http://10.0.2.2:3000/connections/add-contact";
+                String url = "https://pplugin.works/connections/add-contact";
                 JSONObject body = new JSONObject();
                 try {
                     // Ensure receiver_id is an integer
@@ -157,7 +157,7 @@ public class SearchFragment extends Fragment {
         }
         SharedPreferences sharedPreferences = requireActivity().getSharedPreferences("login", getContext().MODE_PRIVATE);
         String jwt = sharedPreferences.getString("token", null);
-        String url = "http://10.0.2.2:3000/users/search-users?q=" + query;
+        String url = "https://pplugin.works/users/search-users?q=" + query;
         RequestQueue queue = com.android.volley.toolbox.Volley.newRequestQueue(requireContext());
         com.android.volley.toolbox.JsonArrayRequest jsonArrayRequest = new com.android.volley.toolbox.JsonArrayRequest(com.android.volley.Request.Method.GET, url, null,
             new com.android.volley.Response.Listener<org.json.JSONArray>() {

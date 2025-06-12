@@ -1,5 +1,6 @@
 package com.pplugin.messo_se.ui;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,6 +20,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.viewpager.widget.ViewPager;
 
 import com.pplugin.messo_se.R;
+import com.pplugin.messo_se.services.ChatService;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -118,7 +120,13 @@ public class MainActivity extends AppCompatActivity {
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 //            return insets;
 //        });
-
+        SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+        int userId = sharedPreferences.getInt("userId", -1);
+        if (userId != -1) {
+            Intent serviceIntent = new Intent(this, ChatService.class);
+            serviceIntent.putExtra("userId", String.valueOf(userId));
+            startService(serviceIntent);
+        }
     }
     @Override
     protected void onDestroy() {

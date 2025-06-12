@@ -81,7 +81,7 @@ public class PendingActivity extends AppCompatActivity {
         Context context = this;
         SharedPreferences sharedPreferences = context.getSharedPreferences("login", Context.MODE_PRIVATE);
         String jwt = sharedPreferences.getString("token", null);
-        String url = "http://10.0.2.2:3000/connections/set-contact-status";
+        String url = "https://pplugin.works/connections/set-contact-status";
         RequestQueue queue = Volley.newRequestQueue(context);
         try {
             if (fromId == null || status == null) {

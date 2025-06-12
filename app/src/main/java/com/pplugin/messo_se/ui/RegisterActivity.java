@@ -85,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                     password.setError("Invalid password");
                     return;
                 }
-                String url = "http://10.0.2.2:3000/auth/register";
+                String url = "https://pplugin.works/auth/register";
                 JSONObject jsonBody = new JSONObject();
                 try {
                     jsonBody.put("username", user);
